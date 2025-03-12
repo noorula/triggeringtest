@@ -1,0 +1,5 @@
+- step:
+    name: test
+    environment: testing-t3-large
+    image: python:3.9
+    command: echo "hello"
