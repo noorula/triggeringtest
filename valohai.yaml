@@ -3,3 +3,15 @@
     environment: testing-t3-large
     image: python:3.9
     command: echo "hello"
+
+- pipeline:
+    name: pipetest
+    nodes:
+      - name: node1
+        step: test
+        type: execution
+      - name: node2
+        step: test2
+        type: execution
+    edges: []
+    
