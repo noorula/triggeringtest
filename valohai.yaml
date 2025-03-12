@@ -11,7 +11,7 @@
         step: test
         type: execution
       - name: node2
-        step: test2
+        step: test
         type: execution
     edges: []
     
