@@ -15,3 +15,25 @@
         type: execution
     edges: []
     
+- step:
+    name: multiple-choices
+    image: python:3.10
+    command: 
+    - pip install valohai-utils
+    - python multichoiceparams.py {parameters}
+    parameters:
+    - name: multichoice
+      multiple: separate
+      multiple-separator: ','
+      type: string
+      default:
+        - red
+        - yellow
+      choices:
+        - red
+        - yellow
+        - blue
+        - green
+    - name: lr
+      default: 0.001
+      type: float
