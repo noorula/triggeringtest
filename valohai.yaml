@@ -12,7 +12,7 @@
         type: execution
       - name: node2
         step: test
-        type: execution
+        type: task
     edges: []
     
 - step:
@@ -37,3 +37,13 @@
     - name: lr
       default: 0.001
       type: float
+
+- step:
+    name: input-test
+    image: python:3.10
+    command:
+    - ls /valohai/inputs/test
+    inputs:
+    - name: test
+      default: s3://valohai-data/data/01JFF/01JFF07E4BNA5HRZ34M5N6YQN7/output-45/**.npz
+      optional: true
